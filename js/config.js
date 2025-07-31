@@ -198,7 +198,7 @@ window.extendAPISites = extendAPISites;
 const AGGREGATED_SEARCH_CONFIG = {
     enabled: true,             // 是否启用聚合搜索
     timeout: 8000,            // 单个源超时时间（毫秒）
-    maxResults: 10000,          // 最大结果数量
+    maxResults: 100,          // 最大结果数量
     parallelRequests: true,   // 是否并行请求所有源
     showSourceBadges: true    // 是否显示来源徽章
 };
@@ -209,7 +209,7 @@ const API_CONFIG = {
         // 只拼接参数部分，不再包含 /api.php/provide/vod/
         path: '?ac=videolist&wd=',
         pagePath: '?ac=videolist&wd={query}&pg={page}',
-        maxPages: 50, // 最大获取页数
+        maxPages: 10, // 最大获取页数
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
             'Accept': 'application/json'
